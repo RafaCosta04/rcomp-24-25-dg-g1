@@ -1,7 +1,7 @@
 # rcomp-dg-g1
 Grupo 1
 
-1222123  João Souza
+1222123  João Sousa
 
 1230927  José Ribeiro
 
