@@ -32,7 +32,7 @@
 ### 3.Floor 0 Inventory ###
 
 - 58 outlets.
--  Consolidation Points.
+- 4 Consolidation Points.
 -  Switches.
 - 1 Horizontal Cross-connects.
 - 1 Intermediate Cross-connect.
@@ -75,7 +75,7 @@
 ### 3.Floor 1 Inventory ###
 
 - 60 outlets.
--  Consolidation Points.
+- 7 Consolidation Points.
 -  Switches.
 - 1 Horizontal Cross-connects.
 - 2 Access Point with a radium of 25m.
@@ -85,7 +85,7 @@
 ### Full Inventory ###
 
 - 152 outlets.
--  Consolidation Points.
+- 11  Consolidation Points.
 -  Switches.
 - 2 Horizontal Cross-connects.
 - 1 Intermediate Cross-connect.
