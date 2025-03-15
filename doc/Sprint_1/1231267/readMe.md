@@ -1,8 +1,3 @@
-## Building Backbone ##
-
-![MeasurementsBuilding1_Backbone](MeasurementsBuilding1_Backbone.png)
-
-
 ## Building 1 ##
 
 ### General Information ###
@@ -50,7 +45,7 @@ no network outlets are to be included there.
 | 1.0.6  | 26.27      | 6          |
 | 1.0.7  | 42.05      | 10         |
 
-***Total Outlets:*** 42
+***Total Outlets:*** 42 + 1 (Access Point)
 
 ### Floor 1 ###
 
@@ -64,7 +59,7 @@ no network outlets are to be included there.
 | 1.1.4 | 26.27      | 6          |
 | 1.1.5 | 42.05      | 10         |
 
-***Total Outlets:*** 28
+***Total Outlets:*** 28 + 1 (Access Point)
 
 ## 3. Structured Cabling Schematic Plan ##
 
@@ -130,19 +125,6 @@ Total Copper Cable Length: 315.12m
 Total Fiber Cable: 1m
 
 
-### Outside ###
-
-***Monomode Fiber Cable:***
-
-From B1 to:
-
-- B2: 81.5m
-- B3: 290m
-- B4: 234m
-
-Total Fiber Cable Used Outside: 605.5m
-
-
 ## ***Patch Panels*** ##
 
 The patch panels must comply with the cable specifications. 
@@ -151,35 +133,114 @@ Similarly, as we selected Monomode Fiber Cable, the Fiber Patch Panels must be c
 
 ### Floor 0 ###
 
-- 1 patch panel of 12 ports (HCC)(Room 1.0.5);
-- 3 patch panels of 12 ports (CP's)(Rooms 1.0.2, 1.0.4, 1.0.6);
-- 1 patch panel of 24 ports (CP)(Room 1.0.7);
+- 2 patch panels of 12 ports (HCC)(Room 1.0.5)   (Copper patch panel and Fiber patch panel);
+- 3 copper patch panels of 12 ports (CP's)(Rooms 1.0.2, 1.0.4, 1.0.6);
+- 2 copper patch panel of 24 ports (CP)(Rooms 1.0.7, 1.0.5);
 
-#### Total: **4 patch panels of 12 ports** and **1 patch panels of 24 ports**
+#### Total: **4 copper patch panels of 12 ports**,**1 fiber patch panel of 12 ports**  and **2 copper patch panels of 24 ports**
 
 
 ### Floor 1 ###
 
-- 1 patch panel of 12 ports (MCC)(Room 1.1.3);
-- 1 patch panel of 12 ports (ICC)(Room 1.1.3);
-- 1 patch panel of 12 ports (HCC)(Room 1.1.3);
-- 3 patch panels of 12 ports (CP's)(Rooms 1.1.1, 1.1.2, 1.1.4);
-- 1 patch panel of 24 ports (CP)(Room 1.1.5);
+- 1 fiber patch panel of 12 ports (MCC)(Room 1.1.3);
+- 1 fiber patch panel of 12 ports (ICC)(Room 1.1.3);
+- 2 patch panels of 12 ports (HCC)(Room 1.1.3) (Copper patch panel and Fiber patch panel);
+- 3 copper patch panels of 12 ports (CP's)(Rooms 1.1.1, 1.1.2, 1.1.4);
+- 1 copper patch panel of 24 ports (CP)(Room 1.1.5);
 
-#### Total: **6 patch panels of 12 ports** and **1 patch panels of 24 ports**
+#### Total: **4 copper patch panels of 12 ports**,**3 fiber patch panel of 12 ports**  and **1 copper patch panel of 24 ports**
+
+
+## ***Racks*** ##
+
+### Floor 0 ###
+
+For the **Horizontal Cross-Connect:** 
+
+- **1U** for 1 copper patch panel of 12 ports;
+- **1U** for 1 fiber patch panel of 12 ports;
+- **1U** switch;
+- **3U** an additional 100% over dimensioning.
+
+#### **Total**: 6U
+
+For each of the 3 **Consolidation Point (12 ports)**
+
+- **1U** for 1 copper patch panel of 12 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
+For each of the 2 **Consolidation Point (24 ports)**
+
+- **1U** for 1 copper patch panel of 24 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
+
+
+### Floor 1 ###
+
+For the **Main Cross-Connect:**
+
+- **1U** for 1 fiber patch panel of 12 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
+For the **Intermediate Cross-Connect:**
+
+- **1U** for 1 fiber patch panel of 12 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
+For the **Horizontal Cross-Connect:**
+
+- **1U** for 1 copper patch panel of 12 ports;
+- **1U** for 1 fiber patch panel of 12 ports;
+- **1U** switch;
+- **3U** an additional 100% over dimensioning.
+
+#### **Total**: 6U
+
+For each of the 3 **Consolidation Point (12 ports)**
+
+- **1U** for 1 copper patch panel of 12 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
+For the 1 **Consolidation Point (24 ports)**
+
+- **1U** for 1 copper patch panel of 24 ports;
+- **1U** switch;
+- **2U** an additional 100% over dimensioning.
+
+#### **Total**: 4U
+
 
 
 ## **TOTAL INVENTORY** ##
 
-- Outlets: 70
+- Outlets: 72
 - CAT7 Copper Cable (m): 744.43
-- Monomode Fiber Cable (m): 621
+- Monomode Fiber Cable (m): 15.5
 - Main Cross-Connect (MCC): 1
 - Intermediate Cross-Connect (ICC): 1
 - Horizontal Cross-Connect (HCC): 2
-- Consolidation Points (CP): 9
+- Consolidation Points (CP with 12 ports) : 6
+- Consolidation Points (CP with 24 ports): 3
 - Access Point (AP): 2
-- Patch Panels (12 ports): 10
-- Patch Panels (24 ports): 2
+- Copper Patch Panels (12 ports): 8
+- Fiber Patch Panels (12 ports): 4
+- Copper Patch Panels (24 ports): 3
+- Telecommunications Enclosures: 13
 
 
