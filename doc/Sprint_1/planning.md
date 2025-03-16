@@ -9,6 +9,9 @@ T.1.4| Development of a structured cabling project for building 4.
 
 **General technical decisions**
 - Rafael Costa will be the Sprint 1 Master.
+- Backbone cable types to be used: Monomode fiber is the most cost-effective decision solution for high-speed data transmission over long distances.
+- End-User Equipment Cable: CAT 7
+- Cabling Infrastructure Standard: 568B standard is more commonly used in Europe, so the team chose 568B.
 
 **Tasks Assigned**
 ```
