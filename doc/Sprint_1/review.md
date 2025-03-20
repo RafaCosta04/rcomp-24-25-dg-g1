@@ -18,3 +18,15 @@
 
 
 [Link to the global inventory](globalInventory.md)
+
+
+### Mistakes and Missing Information  ###
+
+- Missing Representation of Outlets to Access Points
+- Missing Redundancy between MC and IC's
+- Missing Fiber cable for ICP provider to Building 1
+- Justification for CAT7 cables on planning.md
+- Justification for Monomode Fiber cables for other buildings
+- Specification for Access Points channels
+- Missing Radius of Access Points
+- Fix Building 4 Access Points positions
