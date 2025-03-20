@@ -10,7 +10,7 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 
 **Sprint Master**
 
-- Rúben Freitas (1231267) will be the Sprint 1 Master.
+- Rúben Freitas (1231267) will be the Sprint 2 Master.
 
 
 **General technical decisions**
