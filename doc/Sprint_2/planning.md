@@ -82,8 +82,8 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 - **Server:**
     - Server_BN
 
-**BN = Building Number**
-**FN = Floor Number**
+**BN = Building Number**\
+**FN = Floor Number**\
 **RN = Room Number**
 
 
