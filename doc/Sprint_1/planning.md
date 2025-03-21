@@ -16,7 +16,7 @@ T.1.4| Development of a structured cabling project for building 4.
 **Tasks Assigned**
 ```
 T.1.1 - 1231267 - Ruben Freitas
-T.1.2 - 1222123 - João Souza
+T.1.2 - 1222123 - João Sousa
 T.1.3 - 1230927 - José Ribeiro
 T.1.4 - 1231031 - Rafael Costa
 ```
