@@ -54,7 +54,37 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 |    4     |   402   |   B4_VOIP    | 
 
 
+### Device Names ###
 
+- **Router:**
+    - Router_MC
+    - Router_BN
+    - Router_ISP
+
+- **Switch:**
+    - Switch_MC
+    - Switch_BN_IC
+    - Switch_BN_FN_HC
+    - Switch_BN_FN_CP_RN
+
+- **PC:**
+    - PC_BN_FN_RN
+
+- **Laptop:**
+    - Laptop_BN_FN_RN
+
+- **Phone:**
+    - IPPhone_BN_FN_RN
+
+- **Access-Point:**
+    - AP_BN_FN_RN
+
+- **Server:**
+    - Server_BN
+
+**BN = Building Number**
+**FN = Floor Number**
+**RN = Room Number**
 
 
 
