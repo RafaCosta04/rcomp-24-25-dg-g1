@@ -91,7 +91,7 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 **Tasks Assigned**
 ```
 T.2.1 - 1231267 - Ruben Freitas
-T.2.2 - 1222123 - João Sous a
+T.2.2 - 1222123 - João Sousa
 T.2.3 - 1230927 - José Ribeiro
 T.2.4 - 1231031 - Rafael Costa
 ```
