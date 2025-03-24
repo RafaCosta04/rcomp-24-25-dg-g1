@@ -1,11 +1,11 @@
 **Sprint 2** | **Backlog**
 
-Tasks  |  Task Description
--------|------------------
-T.2.1 |  Development of a layer two and layer three Packet Tracer simulation for building 1, encompassing the campus backbone. Integration of every member’s Packet Tracer simulation into a single simulation.
-T.2.2| Development of a layer two and layer three Packet Tracer simulation for building 2, encompassing the campus backbone.
-T.2.3| Development of a layer two and layer three Packet Tracer simulation for building 3, encompassing the campus backbone.
-T.2.4| Development of a layer two and layer three Packet Tracer simulation for building 4, encompassing the campus backbone.
+| Tasks | Task Description                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| T.2.1 | Development of a layer two and layer three Packet Tracer simulation for building 1, encompassing the campus backbone. Integration of every member’s Packet Tracer simulation into a single simulation. |
+| T.2.2 | Development of a layer two and layer three Packet Tracer simulation for building 2, encompassing the campus backbone.                                                                                  |
+| T.2.3 | Development of a layer two and layer three Packet Tracer simulation for building 3, encompassing the campus backbone.                                                                                  |
+| T.2.4 | Development of a layer two and layer three Packet Tracer simulation for building 4, encompassing the campus backbone.                                                                                  |
 
 
 **Sprint Master**
@@ -36,7 +36,7 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 |    1     |   384   |   B1_WiFi    |
 |    1     |   385   |    B1_DMZ    |
 |    1     |   386   |   B1_VOIP    |
-|    1     |   387   | B1_BACKBONE  |
+|    1     |   387   |   BACKBONE   |
 |    2     |   388   | B2_F0_OUTLET |
 |    2     |   389   | B2_F1_OUTLET |
 |    2     |   390   |   B2_WiFi    |
@@ -52,6 +52,21 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 |    4     |   400   |   B4_WiFi    |
 |    4     |   401   |    B4_DMZ    |
 |    4     |   402   |   B4_VOIP    | 
+
+
+### IPV4 DETAILS ###
+
+
+|  Building  | Range Start |   Range End   | Usable IPs |
+|:----------:|:-----------:|:-------------:|------------|
+|  Backbone  | 10.23.160.0 | 10.23.161.255 | 510        |
+| Building 1 | 10.23.162.0 | 10.23.163.255 | 510        |
+| Building 2 | 10.23.164.0 | 10.23.167.255 | 1022       |
+| Building 3 | 10.23.168.0 | 10.23.171.255 | 1022       |
+| Building 4 | 10.23.172.0 | 10.23.175.255 | 1022       |
+
+
+
 
 
 ### Device Names ###
@@ -72,12 +87,14 @@ T.2.4| Development of a layer two and layer three Packet Tracer simulation for b
 
 - **Laptop:**
     - Laptop_BN_FN_RN
+    - Laptop_BN_FN
 
 - **Phone:**
     - IPPhone_BN_FN_RN
 
 - **Access-Point:**
     - AP_BN_FN_RN
+    - AP_BN_FN
 
 - **Server:**
     - Server_BN
