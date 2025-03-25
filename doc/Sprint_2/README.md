@@ -3,23 +3,45 @@
 | Student Number | Building |     IP      |
 |:--------------:|:--------:|:-----------:|
 |    1231267     | Backbone | 10.23.160.0 |
-|    1231267     |    1     | 10.23.161.0 |
+|    1231267     |    1     | 10.23.162.0 |
 |    1222123     |    2     | 10.23.164.0 |
 |    1230927     |    3     | 10.23.168.0 |
 |    1231031     |    4     | 10.23.172.0 |
 
 # Building 1
 
-- End user outlets on the ground floor:  nodes
-- End user outlets on floor one:  nodes
-- Wi-Fi network:  nodes
-- DMZ (Servers, administration workstations, and network infrastructure devices):  nodes
-- VoIP (IP-phones):  nodes
+- End user outlets on the ground floor: 40 nodes
+- End user outlets on floor one: 45 nodes
+- Wi-Fi network: 95 nodes
+- DMZ (Servers, administration workstations, and network infrastructure devices): 110 nodes
+- VoIP (IP-phones): 70 nodes
 
 ## Building 1 Networks ##
+
+| Network                              | Number of nodes | Type of network | 
+|--------------------------------------|-----------------|-----------------|
+| DMZ                                  | 110             | /25             |
+| Wi-Fi network                        | 95              | /25             |
+| VoIP                                 | 70              | /25             |
+| End user outlets on floor one        | 45              | /26             |
+| End user outlets on the ground floor | 40              | /26             |
+
 ## VLANs and IP'S ##
+
+| VLAN Location | VLAN ID | Nodes | Network IP       | Default Gateway | Network Mask    | Range Usable IP             | Available Hosts | Broadcast     | 
+|:--------------|:--------|:------|:-----------------|:----------------|:----------------|:----------------------------|:----------------|---------------|
+| Floor 0       | 382     | 40    | 10.23.163.192/26 | 10.23.163.193   | 255.255.255.192 | 10.23.163.193-10.23.163.254 | 62              | 10.23.163.255 |
+| Floor 1       | 383     | 45    | 10.23.163.128/26 | 10.23.163.129   | 255.255.255.192 | 10.23.163.129-10.23.163.190 | 62              | 10.23.163.191 |
+| Wi-Fi         | 384     | 95    | 10.23.162.128/25 | 10.23.162.129   | 255.255.255.128 | 10.23.162.129-10.23.162.254 | 126             | 10.23.162.255 |
+| DMZ           | 385     | 110   | 10.23.162.0/25   | 10.23.162.1     | 255.255.255.128 | 10.23.162.1-10.23.162.126   | 126             | 10.23.162.127 |
+| VoIP          | 386     | 70    | 10.23.163.0/25   | 10.23.163.1     | 255.255.255.128 | 10.23.163.1-10.23.163.126   | 126             | 10.23.163.127 |
+
+
 # Router #
 ## Sub-Interfaces ##
+
+
+
 # Building 2
 
 - End user outlets on the ground floor: 110 nodes
