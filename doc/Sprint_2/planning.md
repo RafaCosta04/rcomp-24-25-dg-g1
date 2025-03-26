@@ -95,6 +95,7 @@
 - **Access-Point:**
     - AP_BN_FN_RN
     - AP_BN_FN
+    - AP_BN_FN_N
 
 - **Server:**
     - Server_BN
@@ -102,6 +103,7 @@
 **BN = Building Number**\
 **FN = Floor Number**\
 **RN = Room Number**
+**N = Number**
 
 
 
