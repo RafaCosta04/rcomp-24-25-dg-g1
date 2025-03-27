@@ -40,7 +40,13 @@
 # Router #
 ## Sub-Interfaces ##
 
-
+|      SubInt       | VLan Id |
+|:-----------------:|:-------:|
+| FastEthernet1/0.1 |   383   |
+| FastEthernet1/0.2 |   382   |
+| FastEthernet1/0.3 |   384   |
+| FastEthernet1/0.4 |   385   |
+| FastEthernet1/0.5 |   386   |
 
 # Building 2
 
