@@ -161,3 +161,12 @@
 
 # Router #
 ## Sub-Interfaces ##
+
+
+|      SubInt       | VLan Id |
+|:-----------------:|:-------:|
+| FastEthernet1/0.1 |   398   |
+| FastEthernet1/0.2 |   399   |
+| FastEthernet1/0.3 |   400   |
+| FastEthernet1/0.4 |   401   |
+| FastEthernet1/0.5 |   402   |
