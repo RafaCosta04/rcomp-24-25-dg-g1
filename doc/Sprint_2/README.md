@@ -127,8 +127,8 @@
 
 |      SubInt       | VLan Id |
 |:-----------------:|:-------:|
-| FastEthernet1/0.1 |   383   |
-| FastEthernet1/0.2 |   384   |
+| FastEthernet1/0.1 |   393   |
+| FastEthernet1/0.2 |   394   |
 | FastEthernet1/0.3 |   395   |
 | FastEthernet1/0.4 |   396   |
 | FastEthernet1/0.5 |   397   |

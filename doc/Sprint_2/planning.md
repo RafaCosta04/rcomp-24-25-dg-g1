@@ -66,8 +66,15 @@
 | Building 4 | 10.23.172.0 | 10.23.175.255 | 1022       |
 
 
+### UNIQUE IPV4 NODE ADDRESS IN THE BACKBONE FOR EACH BUILDING ###
 
-
+| Router |     IPV4     |
+|:------:|:------------:|
+|   MC   | 10.23.160.1  |
+|   1    | 10.23.160.10 |
+|   2    | 10.23.160.20 |
+|   3    | 10.23.160.30 |
+|   4    | 10.23.160.40 |
 
 ### Device Names ###
 
