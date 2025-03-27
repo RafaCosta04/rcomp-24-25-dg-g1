@@ -91,14 +91,32 @@
 
 # Building 3
 
-- End user outlets on the ground floor:  nodes
-- End user outlets on floor one:  nodes
-- Wi-Fi network:  nodes
-- DMZ (Servers, administration workstations, and network infrastructure devices):  nodes
-- VoIP (IP-phones):  nodes
+- End user outlets on the ground floor: 115 nodes
+- End user outlets on floor one: 135 nodes
+- Wi-Fi network: 220 nodes
+- DMZ (Servers, administration workstations, and network infrastructure devices): 50 nodes
+- VoIP (IP-phones): 170 nodes
 
 ## Building 3 Networks ##
+
+| Network                              | Number of nodes | Type of network | 
+|--------------------------------------|-----------------|-----------------|
+| Wi-Fi network                        | 220             | /24             |
+| VoIP                                 | 170             | /24             |
+| End user outlets on floor one        | 135             | /24             |
+| End user outlets on the ground floor | 115             | /25             |
+| DMZ                                  | 50              | /26             |
+
 ## VLANs and IP'S ##
+
+| VLAN Location | VLAN ID | Nodes | Network IP       | Default Gateway | Network Mask    | Range Usable IP             | Available Hosts | Broadcast     | 
+|:--------------|:--------|:------|:-----------------|:----------------|:----------------|:----------------------------|:----------------|---------------|
+| Floor 0       | 393     | 115   | 10.23.171.0/25   | 10.23.171.1     | 255.255.255.128 | 10.23.171.1-10.23.171.126   | 126             | 10.23.171.127 |
+| Floor 1       | 394     | 135   | 10.23.170.0/24   | 10.23.170.1     | 255.255.255.0   | 10.23.170.1-10.23.170.254   | 254             | 10.23.170.255 |
+| Wi-Fi         | 395     | 220   | 10.23.168.0/24   | 10.23.168.1     | 255.255.255.0   | 10.23.168.1-10.23.168.254   | 254             | 10.23.168.255 |
+| DMZ           | 396     | 50    | 10.23.171.128/26 | 10.23.171.129   | 255.255.255.192 | 10.23.171.129-10.23.171.190 | 62              | 10.23.171.191 |
+| VoIP          | 397     | 170   | 10.23.169.0/24   | 10.23.169.1     | 255.255.255.0   | 10.23.169.1-10.23.169.254   | 254             | 10.23.169.255 |
+
 # Router #
 ## Sub-Interfaces ##
 
