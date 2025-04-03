@@ -24,6 +24,7 @@ interface GigabitEthernet2/1
  switchport access vlan 396
 !
 interface GigabitEthernet3/1
+ switchport mode trunk
 !
 interface GigabitEthernet4/1
  switchport mode trunk
