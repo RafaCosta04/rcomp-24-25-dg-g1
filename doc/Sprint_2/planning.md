@@ -116,7 +116,7 @@
 
 **Tasks Assigned**
 ```
-T.2.1 - 1231267 - Ruben Freitas
+T.2.1 - 1231267 - Rúben Freitas
 T.2.2 - 1222123 - João Sousa
 T.2.3 - 1230927 - José Ribeiro
 T.2.4 - 1231031 - Rafael Costa
