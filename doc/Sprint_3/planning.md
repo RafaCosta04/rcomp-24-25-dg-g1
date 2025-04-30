@@ -20,7 +20,7 @@
 * **Unqualified DNS Local Name:** ns.building-X.rcomp-24-25-dg-g1
 * **HTTP Servers:** server1
 
-Within DNS databases, **all names must be FQDN** (fully qualified domain names). Every name defined in DNS databases, on every name server, must end up with **rcomp-22-23-da-g1**.
+Within DNS databases, **all names must be FQDN** (fully qualified domain names). Every name defined in DNS databases, on every name server, must end up with **rcomp-24-25-dg-g1**.
 
 **X - Bulding Name (2, 3 or 4).**
 
