@@ -1,0 +1,248 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 10.23.171.1
+ip dhcp excluded-address 10.23.170.1
+ip dhcp excluded-address 10.23.168.1
+ip dhcp excluded-address 10.23.169.1
+!
+ip dhcp pool B3_F0_NET
+ network 10.23.171.0 255.255.255.128
+ default-router 10.23.171.1
+ dns-server 10.23.171.130
+ domain-name building-3.rcomp-24-25-dg-g1
+ip dhcp pool B3_F1_NET
+ network 10.23.170.0 255.255.255.0
+ default-router 10.23.170.1
+ dns-server 10.23.171.130
+ domain-name building-3.rcomp-24-25-dg-g1
+ip dhcp pool B3_WIFI
+ network 10.23.168.0 255.255.255.0
+ default-router 10.23.168.1
+ dns-server 10.23.171.130
+ domain-name building-3.rcomp-24-25-dg-g1
+ip dhcp pool B3_VOIP
+ network 10.23.169.0 255.255.255.0
+ default-router 10.23.169.1
+ option 150 ip 10.23.169.1
+ dns-server 10.23.171.130
+ domain-name building-3.rcomp-24-25-dg-g1
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet1/0
+ no ip address
+!
+interface FastEthernet1/0.1
+ encapsulation dot1Q 393
+ ip address 10.23.171.1 255.255.255.128
+ ip access-group 101 in
+ ip nat inside
+!
+interface FastEthernet1/0.2
+ encapsulation dot1Q 394
+ ip address 10.23.170.1 255.255.255.0
+ ip access-group 102 in
+ ip nat inside
+!
+interface FastEthernet1/0.3
+ encapsulation dot1Q 395
+ ip address 10.23.168.1 255.255.255.0
+ ip access-group 103 in
+ ip nat inside
+!
+interface FastEthernet1/0.4
+ encapsulation dot1Q 396
+ ip address 10.23.171.129 255.255.255.192
+ ip access-group 104 in
+ ip nat inside
+!
+interface FastEthernet1/0.5
+ encapsulation dot1Q 397
+ ip address 10.23.169.1 255.255.255.0
+ ip access-group 105 in
+ ip nat inside
+!
+interface FastEthernet1/0.6
+ encapsulation dot1Q 387
+ ip address 10.23.160.30 255.255.254.0
+ ip access-group 100 in
+ ip nat outside
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 10.23.171.0 0.0.0.127 area 3
+ network 10.23.170.0 0.0.0.255 area 3
+ network 10.23.168.0 0.0.0.255 area 3
+ network 10.23.171.128 0.0.0.63 area 3
+ network 10.23.169.0 0.0.0.255 area 3
+ network 10.23.160.0 0.0.1.255 area 0
+!
+ip nat inside source static tcp 10.23.171.130 80 10.23.160.30 80 
+ip nat inside source static tcp 10.23.171.130 443 10.23.160.30 443 
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.23.160.1 
+!
+ip flow-export version 9
+!
+!
+access-list 100 deny ip 10.23.171.0 0.0.0.127 any
+access-list 100 deny ip 10.23.170.0 0.0.0.255 any
+access-list 100 deny ip 10.23.168.0 0.0.0.255 any
+access-list 100 deny ip 10.23.171.128 0.0.0.63 any
+access-list 100 deny ip 10.23.169.0 0.0.0.255 any
+access-list 100 permit icmp any any echo
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any host 10.23.160.30 eq www
+access-list 100 permit tcp any host 10.23.160.30 eq 443
+access-list 100 permit udp any host 10.23.160.30 eq domain
+access-list 100 permit udp any eq bootpc any eq bootps
+access-list 100 permit udp any eq bootps any eq bootpc
+access-list 100 permit ospf any any
+access-list 100 permit udp any any eq tftp
+access-list 100 permit tcp any any eq 2000
+access-list 100 deny ip any host 10.23.171.1
+access-list 100 deny ip any host 10.23.170.1
+access-list 100 deny ip any host 10.23.168.1
+access-list 100 deny ip any host 10.23.169.1
+access-list 100 permit ip any any
+access-list 101 permit ip 10.23.171.0 0.0.0.127 any
+access-list 101 permit icmp any any echo
+access-list 101 permit icmp any any echo-reply
+access-list 101 permit udp any eq bootpc any eq bootps
+access-list 101 permit udp any eq bootps any eq bootpc
+access-list 101 permit ospf 10.23.171.0 0.0.0.127 any
+access-list 101 deny ip any host 10.23.171.1
+access-list 101 permit ip any any
+access-list 102 permit ip 10.23.170.0 0.0.0.255 any
+access-list 102 permit icmp any any echo
+access-list 102 permit icmp any any echo-reply
+access-list 102 permit udp any eq bootpc any eq bootps
+access-list 102 permit udp any eq bootps any eq bootpc
+access-list 102 permit ospf 10.23.170.0 0.0.0.255 any
+access-list 102 deny ip any host 10.23.170.1
+access-list 102 permit ip any any
+access-list 103 permit ip 10.23.168.0 0.0.0.255 any
+access-list 103 permit icmp any any echo
+access-list 103 permit icmp any any echo-reply
+access-list 103 permit udp any eq bootpc any eq bootps
+access-list 103 permit udp any eq bootps any eq bootpc
+access-list 103 permit ospf 10.23.168.0 0.0.0.255 any
+access-list 103 deny ip any host 10.23.168.1
+access-list 103 permit ip any any
+access-list 105 permit ip 10.23.169.0 0.0.0.255 any
+access-list 105 permit icmp any any echo
+access-list 105 permit icmp any any echo-reply
+access-list 105 permit udp any eq bootpc any eq bootps
+access-list 105 permit udp any eq bootps any eq bootpc
+access-list 105 permit ospf 10.23.169.0 0.0.0.255 any
+access-list 105 deny ip any host 10.23.169.1
+access-list 105 permit ip any any
+access-list 104 permit icmp any any echo
+access-list 104 permit icmp any any echo-reply
+access-list 104 permit udp any host 10.23.171.130 eq domain
+access-list 104 permit tcp any host 10.23.171.130 eq domain
+access-list 104 permit tcp any host 10.23.171.130 eq www
+access-list 104 permit tcp any host 10.23.171.130 eq 443
+access-list 104 permit tcp any host 10.23.171.131 eq www
+access-list 104 permit tcp any host 10.23.171.131 eq 443
+access-list 104 deny ip any 10.23.171.128 0.0.0.63
+access-list 104 permit ip any any
+!
+!
+!
+!
+!
+!
+dial-peer voice 386 voip
+ destination-pattern 1...
+ session target ipv4:10.23.163.1
+!
+dial-peer voice 392 voip
+ destination-pattern 2...
+ session target ipv4:10.23.164.1
+!
+dial-peer voice 402 voip
+ destination-pattern 4...
+ session target ipv4:10.23.174.1
+!
+telephony-service
+ no auto-reg-ephone
+ max-ephones 10
+ max-dn 10
+ ip source-address 10.23.169.1 port 2000
+!
+ephone-dn 1
+ number 3000
+!
+ephone-dn 2
+ number 3001
+!
+ephone 1
+ device-security-mode none
+ mac-address 0001.4372.87D0
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 000B.BE14.C123
+ type 7960
+ button 1:2
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
