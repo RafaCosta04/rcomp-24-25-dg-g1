@@ -63,6 +63,7 @@ interface Vlan1
 router ospf 1
  log-adjacency-changes
  network 10.23.160.0 0.0.1.255 area 0
+ default-information originate
 !
 ip classless
 ip route 0.0.0.0 0.0.0.0 87.5.127.173 
