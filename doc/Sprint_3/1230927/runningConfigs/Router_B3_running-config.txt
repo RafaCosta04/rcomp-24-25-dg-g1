@@ -229,13 +229,13 @@ ephone-dn 2
 !
 ephone 1
  device-security-mode none
- mac-address 0006.2A72.0708
+ mac-address 0001.4372.87D0
  type 7960
  button 1:1
 !
 ephone 2
  device-security-mode none
- mac-address 0005.5E79.9588
+ mac-address 000B.BE14.C123
  type 7960
  button 1:2
 !
