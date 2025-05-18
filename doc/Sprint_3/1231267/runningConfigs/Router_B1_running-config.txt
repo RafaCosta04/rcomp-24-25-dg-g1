@@ -44,7 +44,7 @@ no ipv6 cef
 !
 !
 !
-license udi pid CISCO2811/K9 sn FTX10174UV2-
+license udi pid CISCO2811/K9 sn FTX10175XWH-
 !
 !
 !
@@ -161,6 +161,14 @@ access-list 103 permit udp any eq bootps any eq bootpc
 access-list 103 permit ospf 10.23.162.128 0.0.0.127 any
 access-list 103 deny ip any host 10.23.162.129
 access-list 103 permit ip any any
+access-list 105 permit ip 10.23.163.0 0.0.0.127 any
+access-list 105 permit icmp any any echo
+access-list 105 permit icmp any any echo-reply
+access-list 105 permit udp any eq bootpc any eq bootps
+access-list 105 permit udp any eq bootps any eq bootpc
+access-list 105 permit ospf 10.23.163.0 0.0.0.127 any
+access-list 105 deny ip any host 10.23.163.1
+access-list 105 permit ip any any
 access-list 104 permit icmp any any echo
 access-list 104 permit icmp any any echo-reply
 access-list 104 permit udp any host 10.23.162.2 eq domain
@@ -170,14 +178,6 @@ access-list 104 permit tcp any host 10.23.162.3 eq www
 access-list 104 permit tcp any host 10.23.162.3 eq 443
 access-list 104 deny ip any 10.23.162.0 0.0.0.127
 access-list 104 permit ip any any
-access-list 105 permit ip 10.23.163.0 0.0.0.127 any
-access-list 105 permit icmp any any echo
-access-list 105 permit icmp any any echo-reply
-access-list 105 permit udp any eq bootpc any eq bootps
-access-list 105 permit udp any eq bootps any eq bootpc
-access-list 105 permit ospf 10.23.163.0 0.0.0.127 any
-access-list 105 deny ip any host 10.23.163.1
-access-list 105 permit ip any any
 access-list 100 deny ip 10.23.163.192 0.0.0.63 any
 access-list 100 deny ip 10.23.163.128 0.0.0.63 any
 access-list 100 deny ip 10.23.162.128 0.0.0.127 any
