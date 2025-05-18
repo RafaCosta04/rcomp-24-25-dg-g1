@@ -131,26 +131,6 @@ ip route 0.0.0.0 0.0.0.0 10.23.160.1
 ip flow-export version 9
 !
 !
-access-list 100 deny ip 10.23.171.0 0.0.0.127 any
-access-list 100 deny ip 10.23.170.0 0.0.0.255 any
-access-list 100 deny ip 10.23.168.0 0.0.0.255 any
-access-list 100 deny ip 10.23.171.128 0.0.0.63 any
-access-list 100 deny ip 10.23.169.0 0.0.0.255 any
-access-list 100 permit icmp any any echo
-access-list 100 permit icmp any any echo-reply
-access-list 100 permit tcp any host 10.23.160.30 eq www
-access-list 100 permit tcp any host 10.23.160.30 eq 443
-access-list 100 permit udp any host 10.23.160.30 eq domain
-access-list 100 permit udp any eq bootpc any eq bootps
-access-list 100 permit udp any eq bootps any eq bootpc
-access-list 100 permit ospf any any
-access-list 100 permit udp any any eq tftp
-access-list 100 permit tcp any any eq 2000
-access-list 100 deny ip any host 10.23.171.1
-access-list 100 deny ip any host 10.23.170.1
-access-list 100 deny ip any host 10.23.168.1
-access-list 100 deny ip any host 10.23.169.1
-access-list 100 permit ip any any
 access-list 101 permit ip 10.23.171.0 0.0.0.127 any
 access-list 101 permit icmp any any echo
 access-list 101 permit icmp any any echo-reply
@@ -186,13 +166,37 @@ access-list 105 permit ip any any
 access-list 104 permit icmp any any echo
 access-list 104 permit icmp any any echo-reply
 access-list 104 permit udp any host 10.23.171.130 eq domain
-access-list 104 permit tcp any host 10.23.171.130 eq domain
 access-list 104 permit tcp any host 10.23.171.130 eq www
 access-list 104 permit tcp any host 10.23.171.130 eq 443
 access-list 104 permit tcp any host 10.23.171.131 eq www
 access-list 104 permit tcp any host 10.23.171.131 eq 443
 access-list 104 deny ip any 10.23.171.128 0.0.0.63
 access-list 104 permit ip any any
+access-list 100 deny ip 10.23.171.0 0.0.0.127 any
+access-list 100 deny ip 10.23.170.0 0.0.0.255 any
+access-list 100 deny ip 10.23.168.0 0.0.0.255 any
+access-list 100 deny ip 10.23.171.128 0.0.0.63 any
+access-list 100 deny ip 10.23.169.0 0.0.0.255 any
+access-list 100 permit ip any 10.23.171.0 0.0.0.127
+access-list 100 permit ip any 10.23.170.0 0.0.0.255
+access-list 100 permit ip any 10.23.168.0 0.0.0.255
+access-list 100 permit ip any 10.23.171.128 0.0.0.63
+access-list 100 permit ip any 10.23.169.0 0.0.0.255
+access-list 100 permit icmp any any echo
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any host 10.23.160.30 eq www
+access-list 100 permit tcp any host 10.23.160.30 eq 443
+access-list 100 permit udp any host 10.23.160.30 eq domain
+access-list 100 permit udp any eq bootpc any eq bootps
+access-list 100 permit udp any eq bootps any eq bootpc
+access-list 100 permit ospf any any
+access-list 100 permit udp any any eq tftp
+access-list 100 permit tcp any any eq 2000
+access-list 100 deny ip any host 10.23.171.1
+access-list 100 deny ip any host 10.23.170.1
+access-list 100 deny ip any host 10.23.168.1
+access-list 100 deny ip any host 10.23.169.1
+access-list 100 permit ip any any
 !
 !
 !
@@ -225,13 +229,13 @@ ephone-dn 2
 !
 ephone 1
  device-security-mode none
- mac-address 0001.4372.87D0
+ mac-address 0006.2A72.0708
  type 7960
  button 1:1
 !
 ephone 2
  device-security-mode none
- mac-address 000B.BE14.C123
+ mac-address 0005.5E79.9588
  type 7960
  button 1:2
 !
