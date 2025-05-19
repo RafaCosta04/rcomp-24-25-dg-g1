@@ -100,21 +100,6 @@ The **Domain Name System (DNS)** is the service behind **accessing information**
 | **Building 4** |    10.23.175.131     |
 
 
-## 2.5 NAT
-
-**Network Address Translation (NAT)** is a way to **map multiple local private addresses to a public one** before transferring any information, often enforced to hide said private addresses.
-
-**NAT** also has different types:
-
-* **Static NAT**, which always chooses **the same IP address every time**;
-
-* **Dynamic NAT**, which **goes through a pool of public IP addresses**, which results in **getting a different address each time**.
-
-## 2.6 Static Firewall
-
-A **Static Firewall** works by **examining each packet** as it attempts to access a device, by looking at the **source** and **destination IP address**, to then **permit** or **reject** said packet.
-
-
 # 3. Subtasks assignment #
 
 * **1231267** - Update the building1.pkt layer three Packet Tracer simulation from the previous sprint.
