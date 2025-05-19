@@ -183,6 +183,11 @@ access-list 100 deny ip 10.23.163.128 0.0.0.63 any
 access-list 100 deny ip 10.23.162.128 0.0.0.127 any
 access-list 100 deny ip 10.23.162.0 0.0.0.127 any
 access-list 100 deny ip 10.23.163.0 0.0.0.127 any
+access-list 100 permit ip any 10.23.163.192 0.0.0.63
+access-list 100 permit ip any 10.23.163.128 0.0.0.63
+access-list 100 permit ip any 10.23.162.128 0.0.0.127
+access-list 100 permit ip any 10.23.162.0 0.0.0.127
+access-list 100 permit ip any 10.23.163.0 0.0.0.127
 access-list 100 permit icmp any any echo
 access-list 100 permit icmp any any echo-reply
 access-list 100 permit tcp any host 10.23.160.10 eq www

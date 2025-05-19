@@ -135,26 +135,6 @@ ip route 0.0.0.0 0.0.0.0 10.23.160.1
 ip flow-export version 9
 !
 !
-access-list 100 deny ip 10.23.175.0 0.0.0.127 any
-access-list 100 deny ip 10.23.173.0 0.0.0.255 any
-access-list 100 deny ip 10.23.172.0 0.0.0.255 any
-access-list 100 deny ip 10.23.175.128 0.0.0.63 any
-access-list 100 deny ip 10.23.174.0 0.0.0.255 any
-access-list 100 permit icmp any any echo
-access-list 100 permit icmp any any echo-reply
-access-list 100 permit tcp any host 10.23.160.40 eq www
-access-list 100 permit tcp any host 10.23.160.40 eq 443
-access-list 100 permit udp any host 10.23.160.40 eq domain
-access-list 100 permit udp any eq bootpc any eq bootps
-access-list 100 permit udp any eq bootps any eq bootpc
-access-list 100 permit ospf any any
-access-list 100 permit udp any any eq tftp
-access-list 100 permit tcp any any eq 2000
-access-list 100 deny ip any host 10.23.175.1
-access-list 100 deny ip any host 10.23.173.1
-access-list 100 deny ip any host 10.23.172.1
-access-list 100 deny ip any host 10.23.174.1
-access-list 100 permit ip any any
 access-list 101 permit ip 10.23.175.0 0.0.0.127 any
 access-list 101 permit icmp any any echo
 access-list 101 permit icmp any any echo-reply
@@ -190,13 +170,37 @@ access-list 105 permit ip any any
 access-list 104 permit icmp any any echo
 access-list 104 permit icmp any any echo-reply
 access-list 104 permit udp any host 10.23.175.130 eq domain
-access-list 104 permit tcp any host 10.23.175.130 eq domain
 access-list 104 permit tcp any host 10.23.175.130 eq www
 access-list 104 permit tcp any host 10.23.175.130 eq 443
 access-list 104 permit tcp any host 10.23.175.131 eq www
 access-list 104 permit tcp any host 10.23.175.131 eq 443
 access-list 104 deny ip any 10.23.175.128 0.0.0.63
 access-list 104 permit ip any any
+access-list 100 deny ip 10.23.175.0 0.0.0.127 any
+access-list 100 deny ip 10.23.173.0 0.0.0.255 any
+access-list 100 deny ip 10.23.172.0 0.0.0.255 any
+access-list 100 deny ip 10.23.175.128 0.0.0.63 any
+access-list 100 deny ip 10.23.174.0 0.0.0.255 any
+access-list 100 permit ip any 10.23.175.0 0.0.0.127
+access-list 100 permit ip any 10.23.173.0 0.0.0.255
+access-list 100 permit ip any 10.23.172.0 0.0.0.255
+access-list 100 permit ip any 10.23.175.128 0.0.0.63
+access-list 100 permit ip any 10.23.174.0 0.0.0.255
+access-list 100 permit icmp any any echo
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any host 10.23.160.40 eq www
+access-list 100 permit tcp any host 10.23.160.40 eq 443
+access-list 100 permit udp any host 10.23.160.40 eq domain
+access-list 100 permit udp any eq bootpc any eq bootps
+access-list 100 permit udp any eq bootps any eq bootpc
+access-list 100 permit ospf any any
+access-list 100 permit udp any any eq tftp
+access-list 100 permit tcp any any eq 2000
+access-list 100 deny ip any host 10.23.175.1
+access-list 100 deny ip any host 10.23.173.1
+access-list 100 deny ip any host 10.23.172.1
+access-list 100 deny ip any host 10.23.174.1
+access-list 100 permit ip any any
 !
 !
 !
