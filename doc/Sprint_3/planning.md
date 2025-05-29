@@ -78,10 +78,10 @@ The **Domain Name System (DNS)** is the service behind **accessing information**
 
 | Building Name  |        **Local DNS**         |
 |:--------------:|:----------------------------:|
-| **Building 1** |      rcomp-22-23-da-g1       |
-| **Building 2** | building-2.rcomp-22-23-da-g1 |
-| **Building 3** | building-3.rcomp-22-23-da-g1 |
-| **Building 4** | building-4.rcomp-22-23-da-g1 |
+| **Building 1** |      rcomp-24-25-dg-g1       |
+| **Building 2** | building-2.rcomp-24-25-dg-g1 |
+| **Building 3** | building-3.rcomp-24-25-dg-g1 |
+| **Building 4** | building-4.rcomp-24-25-dg-g1 |
 
 | Building Name  | **DNS Server IPv4** |
 |:--------------:|:-------------------:|
